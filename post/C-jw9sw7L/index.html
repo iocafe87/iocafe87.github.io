@@ -1,10 +1,10 @@
-<html lang="zh">
+<html>
 <head>
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>关于 - iocafe87</title>
+<title>在Mac下设置ll、la等命令别名 | iocafe87</title>
 
 <link rel="shortcut icon" href="https://iocafe87.github.io/favicon.ico?v=1623240484523">
 
@@ -25,7 +25,7 @@
 
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
@@ -86,14 +86,50 @@
 </nav>
 
     <div class="post-container">
-        <div class="post-detail">
+        <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
-                <div class="post-content">
+                <h2 class="post-title">
+                    在Mac下设置ll、la等命令别名
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-06-09 ·
+                    </time>
                     
+                        <a href="https://iocafe87.github.io/tag/_lgW7WUI6/" class="post-tags">
+                            # macOS
+                        </a>
+                    
+                        <a href="https://iocafe87.github.io/tag/FTBEeiwFex/" class="post-tags">
+                            # alias
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>Linux下的<code>ll</code>，<code>la</code>用起来非常方便，但是Mac下默认是没有这些别名的。我们可以自己配置一下别名。把指令配置到<code>~/.bash_profile</code>文件当中即可（如果没有，请自行创建）。</p>
+<pre><code class="language-bash">vim ~/.bash_profile
+</code></pre>
+<p>添加这些别名（也可根据自己的喜好添加参数）：</p>
+<pre><code class="language-bash">alias ll='ls -l'
+alias la='ls -Al'
+</code></pre>
+<p>保存文件之后，执行一下<code>source ~/.bash_profile</code>，即可生效了。</p>
+
                 </div>
             </article>
         </div>
-        <br>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://iocafe87.github.io/post/fGUTHAlLr/" class="post-title gt-a-link">
+                    使用Cloudflare的免费SSL证书
+                </a>
+            </div>
+        
+
+        
+
         
             
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css">
@@ -140,11 +176,11 @@
 </script>
 
             
+
             
         
 
         
-
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">温故而知新</div>

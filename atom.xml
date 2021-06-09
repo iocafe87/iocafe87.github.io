@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iocafe87.github.io</id>
     <title>iocafe87</title>
-    <updated>2021-06-09T12:02:33.360Z</updated>
+    <updated>2021-06-09T12:08:10.098Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iocafe87.github.io"/>
     <link rel="self" href="https://iocafe87.github.io/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://iocafe87.github.io/images/avatar.png</logo>
     <icon>https://iocafe87.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, iocafe87</rights>
+    <entry>
+        <title type="html"><![CDATA[在Mac下设置ll、la等命令别名]]></title>
+        <id>https://iocafe87.github.io/post/C-jw9sw7L/</id>
+        <link href="https://iocafe87.github.io/post/C-jw9sw7L/">
+        </link>
+        <updated>2021-06-09T12:07:21.000Z</updated>
+        <content type="html"><![CDATA[<p>Linux下的<code>ll</code>，<code>la</code>用起来非常方便，但是Mac下默认是没有这些别名的。我们可以自己配置一下别名。把指令配置到<code>~/.bash_profile</code>文件当中即可（如果没有，请自行创建）。</p>
+<pre><code class="language-bash">vim ~/.bash_profile
+</code></pre>
+<p>添加这些别名（也可根据自己的喜好添加参数）：</p>
+<pre><code class="language-bash">alias ll='ls -l'
+alias la='ls -Al'
+</code></pre>
+<p>保存文件之后，执行一下<code>source ~/.bash_profile</code>，即可生效了。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用Cloudflare的免费SSL证书]]></title>
         <id>https://iocafe87.github.io/post/fGUTHAlLr/</id>
