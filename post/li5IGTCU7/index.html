@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>在Mac下设置ll、la等命令别名 | iocafe87</title>
+<title>通过配置iTerm2的Profiles来方便管理VPS的SSH登录 | iocafe87</title>
 
 <link rel="shortcut icon" href="https://iocafe87.github.io/favicon.ico?v=1623240807672">
 
@@ -89,31 +89,37 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    在Mac下设置ll、la等命令别名
+                    通过配置iTerm2的Profiles来方便管理VPS的SSH登录
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
                         · 2021-06-09 ·
                     </time>
                     
+                        <a href="https://iocafe87.github.io/tag/Tt-2SSbgn/" class="post-tags">
+                            # iTerm2
+                        </a>
+                    
+                        <a href="https://iocafe87.github.io/tag/W-hjikTmtM/" class="post-tags">
+                            # SSH
+                        </a>
+                    
                         <a href="https://iocafe87.github.io/tag/_lgW7WUI6/" class="post-tags">
                             # macOS
                         </a>
                     
-                        <a href="https://iocafe87.github.io/tag/FTBEeiwFex/" class="post-tags">
-                            # alias
-                        </a>
-                    
                 </div>
                 <div class="post-content">
-                    <p>Linux下的<code>ll</code>，<code>la</code>用起来非常方便，但是Mac下默认是没有这些别名的。我们可以自己配置一下别名。把指令配置到<code>~/.bash_profile</code>文件当中即可（如果没有，请自行创建）。</p>
-<pre><code class="language-bash">vim ~/.bash_profile
-</code></pre>
-<p>添加这些别名（也可根据自己的喜好添加参数）：</p>
-<pre><code class="language-bash">alias ll='ls -l'
-alias la='ls -Al'
-</code></pre>
-<p>保存文件之后，执行一下<code>source ~/.bash_profile</code>，即可生效了。</p>
+                    <p>喜欢折腾VPS的人，难免手上会有一堆IP地址，平时记忆起来也比较麻烦，每次SSH远程登录管理VPS总要找半天。Mac上的终端软件<code>iTerm</code>恰好可以通过配置它的Profiles来实现VPS的快速登录。当然还可以组合更多的方式方法，可配置的自由度很高。</p>
+<p>通过配置打开iTerm的Profiles菜单，找到<code>Open Profiles</code>。</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/LVVfyp.jpg" alt="" loading="lazy"></figure>
+<p>点击新窗口右下的<code>Edit Profiles...</code>，会继续打开一个新窗口</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/TxSiMv.jpg" alt="TxSiMv" loading="lazy"></figure>
+<p>点击左下角的<code>加号</code>来添加一个配置，选择右侧的<code>Command</code>，也就是激活这个窗口的时候需要执行的指令，直接把<code>ssh</code>的相关指令写进去，这样就可实现激活这个新窗口就开始登录我们的VPS。<code>Name</code>当中填写一个自己能够很清楚分辨的名字，比如我自己的习惯是 <code>节点名字 - IP</code> 或 <code>主机名 - IP</code>。</p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/WqHzib.jpg" alt="WqHzib" loading="lazy"></figure>
+<p>登录VPS只需要从菜单栏中<code>Profiles</code>打开，选择刚才新建的配置即可</p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/k2wdae.jpg" alt="k2wdae" loading="lazy"></figure>
+<p>建议可以使用证书方式的SSH登录，这样每次登录就不必要输入密码，安全也更方便。</p>
 
                 </div>
             </article>
@@ -122,8 +128,8 @@ alias la='ls -Al'
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://iocafe87.github.io/post/fGUTHAlLr/" class="post-title gt-a-link">
-                    使用Cloudflare的免费SSL证书
+                <a href="https://iocafe87.github.io/post/C-jw9sw7L/" class="post-title gt-a-link">
+                    在Mac下设置ll、la等命令别名
                 </a>
             </div>
         

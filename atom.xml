@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iocafe87.github.io</id>
     <title>iocafe87</title>
-    <updated>2021-06-09T12:09:15.050Z</updated>
+    <updated>2021-06-09T12:14:10.046Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iocafe87.github.io"/>
     <link rel="self" href="https://iocafe87.github.io/atom.xml"/>
@@ -10,6 +10,24 @@
     <logo>https://iocafe87.github.io/images/avatar.png</logo>
     <icon>https://iocafe87.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, iocafe87</rights>
+    <entry>
+        <title type="html"><![CDATA[通过配置iTerm2的Profiles来方便管理VPS的SSH登录]]></title>
+        <id>https://iocafe87.github.io/post/li5IGTCU7/</id>
+        <link href="https://iocafe87.github.io/post/li5IGTCU7/">
+        </link>
+        <updated>2021-06-09T12:10:19.000Z</updated>
+        <content type="html"><![CDATA[<p>喜欢折腾VPS的人，难免手上会有一堆IP地址，平时记忆起来也比较麻烦，每次SSH远程登录管理VPS总要找半天。Mac上的终端软件<code>iTerm</code>恰好可以通过配置它的Profiles来实现VPS的快速登录。当然还可以组合更多的方式方法，可配置的自由度很高。</p>
+<p>通过配置打开iTerm的Profiles菜单，找到<code>Open Profiles</code>。</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/LVVfyp.jpg" alt="" loading="lazy"></figure>
+<p>点击新窗口右下的<code>Edit Profiles...</code>，会继续打开一个新窗口</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/TxSiMv.jpg" alt="TxSiMv" loading="lazy"></figure>
+<p>点击左下角的<code>加号</code>来添加一个配置，选择右侧的<code>Command</code>，也就是激活这个窗口的时候需要执行的指令，直接把<code>ssh</code>的相关指令写进去，这样就可实现激活这个新窗口就开始登录我们的VPS。<code>Name</code>当中填写一个自己能够很清楚分辨的名字，比如我自己的习惯是 <code>节点名字 - IP</code> 或 <code>主机名 - IP</code>。</p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/WqHzib.jpg" alt="WqHzib" loading="lazy"></figure>
+<p>登录VPS只需要从菜单栏中<code>Profiles</code>打开，选择刚才新建的配置即可</p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/k2wdae.jpg" alt="k2wdae" loading="lazy"></figure>
+<p>建议可以使用证书方式的SSH登录，这样每次登录就不必要输入密码，安全也更方便。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[在Mac下设置ll、la等命令别名]]></title>
         <id>https://iocafe87.github.io/post/C-jw9sw7L/</id>
