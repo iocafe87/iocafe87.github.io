@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>通过配置iTerm2的Profiles来方便管理VPS的SSH登录 | iocafe87</title>
+<title>Gridea 真心很纯粹的静态博客工具 | iocafe87</title>
 
 <link rel="shortcut icon" href="https://iocafe87.github.io/favicon.ico?v=1623243243334">
 
@@ -89,37 +89,36 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    通过配置iTerm2的Profiles来方便管理VPS的SSH登录
+                    Gridea 真心很纯粹的静态博客工具
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
                         · 2021-06-09 ·
                     </time>
                     
-                        <a href="https://iocafe87.github.io/tag/Tt-2SSbgn/" class="post-tags">
-                            # iTerm2
+                        <a href="https://iocafe87.github.io/tag/GEbwhm2Dz/" class="post-tags">
+                            # Gridea
                         </a>
                     
-                        <a href="https://iocafe87.github.io/tag/W-hjikTmtM/" class="post-tags">
-                            # SSH
-                        </a>
-                    
-                        <a href="https://iocafe87.github.io/tag/_lgW7WUI6/" class="post-tags">
-                            # macOS
+                        <a href="https://iocafe87.github.io/tag/sM8yjYWup/" class="post-tags">
+                            # Gitalk
                         </a>
                     
                 </div>
                 <div class="post-content">
-                    <p>喜欢折腾VPS的人，难免手上会有一堆IP地址，平时记忆起来也比较麻烦，每次SSH远程登录管理VPS总要找半天。Mac上的终端软件<code>iTerm</code>恰好可以通过配置它的Profiles来实现VPS的快速登录。当然还可以组合更多的方式方法，可配置的自由度很高。</p>
-<p>通过配置打开iTerm的Profiles菜单，找到<code>Open Profiles</code>。</p>
-<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/LVVfyp.jpg" alt="" loading="lazy"></figure>
-<p>点击新窗口右下的<code>Edit Profiles...</code>，会继续打开一个新窗口</p>
-<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/TxSiMv.jpg" alt="TxSiMv" loading="lazy"></figure>
-<p>点击左下角的<code>加号</code>来添加一个配置，选择右侧的<code>Command</code>，也就是激活这个窗口的时候需要执行的指令，直接把<code>ssh</code>的相关指令写进去，这样就可实现激活这个新窗口就开始登录我们的VPS。<code>Name</code>当中填写一个自己能够很清楚分辨的名字，比如我自己的习惯是 <code>节点名字 - IP</code> 或 <code>主机名 - IP</code>。</p>
-<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/WqHzib.jpg" alt="WqHzib" loading="lazy"></figure>
-<p>登录VPS只需要从菜单栏中<code>Profiles</code>打开，选择刚才新建的配置即可</p>
-<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/k2wdae.jpg" alt="k2wdae" loading="lazy"></figure>
-<p>建议可以使用证书方式的SSH登录，这样每次登录就不必要输入密码，安全也更方便。</p>
+                    <p>虽然总爱去折腾各类博客工具，从早期的 wordpress、typecho，到现在各类 markdown + 静态化。jekyll、octopress、hexo... 折腾了一圈下来，笔记没写多少，真的就只剩下折腾了，当初还摸索着做了几个 typecho 的主题皮肤。</p>
+<p>无意间在 github 上看到某位大佬正在使用 Gridea，饶有兴趣的点进去看了下，果然不愧是被大佬看上眼的产品啊，真是简洁用心的产品设计，不需要折腾前先得配合着文档一步一步的操作 😂，只需要专注在撰写内容上即可，尤其配合像 uPic 这类APP + 图床 的组合，简直不要太爽。</p>
+<h3 id="主题安装">主题安装</h3>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/O6Uegb.png" alt="O6Uegb" loading="lazy"></figure>
+<p>点击左下角，打开设置，定位到 Gridea 的<code>站点源文件路径</code>，将下载的主题文件，解压缩放<code>themes</code>下，重启 APP 即可。</p>
+<h3 id="配置-gitalk">配置 Gitalk</h3>
+<p>首先需要在 Github 上创建一个 Application , <a href="https://github.com/settings/applications/new">https://github.com/settings/applications/new</a></p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/LGy9Nh.png" alt="LGy9Nh" loading="lazy"></figure>
+<p><code>Homepage URL</code>和<code>Authorization callback URL</code>填写自己博客的URL，例如我填写的 <code>https://iocafe87.github.io</code></p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/RVswpo.png" alt="RVswpo" loading="lazy"></figure>
+<p>拿到<code>ClientID</code>和<code>ClientSecrets</code>留着备用，此时再创建一个<code>public</code>的项目，名字自己随意，例如我建的<code>blog_comment</code>。</p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/AdZL5p.png" alt="AdZL5p" loading="lazy"></figure>
+<p>再把以上所有的信息配置到<code>评论配置</code>里面即可。剩下的，就可以开始折腾了 🤔</p>
 
                 </div>
             </article>
@@ -128,8 +127,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://iocafe87.github.io/post/C-jw9sw7L/" class="post-title gt-a-link">
-                    在Mac下设置ll、la等命令别名
+                <a href="https://iocafe87.github.io/post/li5IGTCU7/" class="post-title gt-a-link">
+                    通过配置iTerm2的Profiles来方便管理VPS的SSH登录
                 </a>
             </div>
         

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iocafe87.github.io</id>
     <title>iocafe87</title>
-    <updated>2021-06-09T12:14:42.239Z</updated>
+    <updated>2021-06-09T12:54:05.416Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iocafe87.github.io"/>
     <link rel="self" href="https://iocafe87.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://iocafe87.github.io/images/avatar.png</logo>
     <icon>https://iocafe87.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, iocafe87</rights>
+    <entry>
+        <title type="html"><![CDATA[Gridea 真心很纯粹的静态博客工具]]></title>
+        <id>https://iocafe87.github.io/post/9lZq3Avf-/</id>
+        <link href="https://iocafe87.github.io/post/9lZq3Avf-/">
+        </link>
+        <updated>2021-06-09T12:19:28.000Z</updated>
+        <content type="html"><![CDATA[<p>虽然总爱去折腾各类博客工具，从早期的 wordpress、typecho，到现在各类 markdown + 静态化。jekyll、octopress、hexo... 折腾了一圈下来，笔记没写多少，真的就只剩下折腾了，当初还摸索着做了几个 typecho 的主题皮肤。</p>
+<p>无意间在 github 上看到某位大佬正在使用 Gridea，饶有兴趣的点进去看了下，果然不愧是被大佬看上眼的产品啊，真是简洁用心的产品设计，不需要折腾前先得配合着文档一步一步的操作 😂，只需要专注在撰写内容上即可，尤其配合像 uPic 这类APP + 图床 的组合，简直不要太爽。</p>
+<h3 id="主题安装">主题安装</h3>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/O6Uegb.png" alt="O6Uegb" loading="lazy"></figure>
+<p>点击左下角，打开设置，定位到 Gridea 的<code>站点源文件路径</code>，将下载的主题文件，解压缩放<code>themes</code>下，重启 APP 即可。</p>
+<h3 id="配置-gitalk">配置 Gitalk</h3>
+<p>首先需要在 Github 上创建一个 Application , <a href="https://github.com/settings/applications/new">https://github.com/settings/applications/new</a></p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/LGy9Nh.png" alt="LGy9Nh" loading="lazy"></figure>
+<p><code>Homepage URL</code>和<code>Authorization callback URL</code>填写自己博客的URL，例如我填写的 <code>https://iocafe87.github.io</code></p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/RVswpo.png" alt="RVswpo" loading="lazy"></figure>
+<p>拿到<code>ClientID</code>和<code>ClientSecrets</code>留着备用，此时再创建一个<code>public</code>的项目，名字自己随意，例如我建的<code>blog_comment</code>。</p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/AdZL5p.png" alt="AdZL5p" loading="lazy"></figure>
+<p>再把以上所有的信息配置到<code>评论配置</code>里面即可。剩下的，就可以开始折腾了 🤔</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[通过配置iTerm2的Profiles来方便管理VPS的SSH登录]]></title>
         <id>https://iocafe87.github.io/post/li5IGTCU7/</id>
