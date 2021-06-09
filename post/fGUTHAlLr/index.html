@@ -1,11 +1,10 @@
 <html>
-
 <head>
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>友情链接 - iocafe87</title>
+<title>使用Cloudflare的免费SSL证书 | iocafe87</title>
 
 <link rel="shortcut icon" href="https://iocafe87.github.io/favicon.ico?v=1623239780755">
 
@@ -26,12 +25,11 @@
 
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
-
 <body>
 <div class="main gt-bg-theme-color-first">
-        <div class="main-content">
-            <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -87,25 +85,61 @@
     </div>
 </nav>
 
-            <div class="post-container">
-                <div class="post-detail">
-                    <article>
-                        <!-- <div class="post-content-wrapper"> -->
-                            <div class="post-content">
-                                <div class="friends-desc">
-                                    
-                                </div>
-                                <h3 id="linklist">友链列表</h3>
-                                
-                                    
-                                
-                            </div>
-                        <!-- </div> -->
-                    </article>
-                </div>
-                
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    使用Cloudflare的免费SSL证书
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-06-09 ·
+                    </time>
                     
-                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css">
+                </div>
+                <div class="post-content">
+                    <p>随着像Google、百度等都表示将更亲和https站点，降权http站点，以及Chrome宣布对非https的站点，将标记为“不安全”的措施以来，全站启用https越来越将是未来的一个必然趋势，也是网站运营者对访问用户的一种安全责任。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/05/02/6Y2fclj3NJSM57W.png" alt="https://i.loli.net/2020/05/02/6Y2fclj3NJSM57W.png" loading="lazy"></figure>
+<p>目前诸多CDN服务商都开始提供免费的SSL证书服务，对于像我们这类小博客来说，使用免费的证书足以达到https的基本需求了。今天就来介绍一下申请Cloudflare的免费SSL证书，并配置到nginx上去。（前提要求，域名必须添加到Cloudflare当中，并将域名的NS配置为Cloudflare的NS服务器）</p>
+<h3 id="操作方法">操作方法</h3>
+<figure data-type="image" tabindex="2"><img src="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/kg741.png" alt="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/kg741.png" loading="lazy"></figure>
+<p>打开<strong>对应域名</strong>的&quot;Crypto&quot;配置界面，找到右侧的选项卡进行选择。分别有<code>Off</code> <code>Flexible</code> <code>Full</code> <code>Full (strict)</code>，在页面上的<code>Help</code>上可以找到一些介绍。</p>
+<ul>
+<li>Off: 顾名思义就是不启用https访问，所有的https都将被重定向到http上</li>
+<li>Flexible: 访问者到Cloudflare的连接是通过https协议，而Cloudflare到源站的连接是通过http协议，适用于那些无法把SSL证书配置到源站上的用户选择。</li>
+<li>Full: 访问者到Cloudflare，再到源站的连接，都是通过https协议完成。但是并不会去验证Cloudflare到源站之间https协议证书是否为“自签”。</li>
+<li>Full(strict): 与Full的都为全程https协议连接。但会验证Cloudflare到源站之间的https协议证书的合法性：“没有过期的可信机构签发的CA证书”</li>
+</ul>
+<p>如果此处选择使用<code>Flexible</code>的话，我们就基本的完成了https的配置，因为在源站上可以不改变任何的配置，例如保持nginx上使用80端口的配置不变。如果此处我们选择了<code>Full</code>或<code>Full(strict)</code>，则可以使用Cloudflare创建一个免费的证书。</p>
+<figure data-type="image" tabindex="3"><img src="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/2ug4c.png" alt="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/2ug4c.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/oja1x.jpg" alt="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/oja1x.jpg" loading="lazy"></figure>
+<p>我们可以把<code>Always USE HTTPS</code>打开，这样所有的http请求会通过cloudflare这边，重定向到https上</p>
+<figure data-type="image" tabindex="5"><img src="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/1b1o3.png" alt="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/1b1o3.png" loading="lazy"></figure>
+<h3 id="配置nginx">配置nginx</h3>
+<p>之后根据你自己的需求选择不同的签发形式，我这里选择默认的形式，拿到证书和私钥。通过FTP上传到VPS上，再配置nginx，即可实现全程都加密的https访问了。</p>
+<pre><code class="language-bash">ssl on;
+ssl_certificate /usr/local/nginx/conf/ssl/gofmt.crt;
+ssl_certificate_key /usr/local/nginx/conf/ssl/gofmt.key;
+</code></pre>
+<figure data-type="image" tabindex="6"><img src="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/2k867.jpg" alt="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/2k867.jpg" loading="lazy"></figure>
+<p>这样，我们的工作便完成了！</p>
+<h3 id="一些问题">一些问题</h3>
+<p>配置nginx可能会遇到<code>PEM_read_bio_X509_AUX</code>这样的错误提示，可能是在copy证书时，字符少拷贝了，或者多打了一些字符，重新copy一下即可解决</p>
+<h3 id="题外话">题外话</h3>
+<p>Cloudflare的CDN海外节点在国内访问，会有不稳定的情况发生，静态资源加载起来很卡，所以服务于国内用户的站，还是建议备案并使用国内CDN，对于我这个博客而言，小众站点无所谓了。</p>
+<p>相传GFW对证书是Cloudflare签发的站，还会“特别照顾”，不知道是不是真的。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+
+        
+
+        
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 <script>
     // md5.min.js
@@ -148,15 +182,14 @@
 
 </script>
 
-                    
+            
 
-                    
-                
-            </div>
+            
+        
 
+        
 
-
-            <div class="site-footer gt-c-content-color-first">
+        <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">温故而知新</div>
     <div class="social-container">
         
@@ -186,8 +219,7 @@
   hljs.initHighlightingOnLoad()
 </script>
 
-        </div>
     </div>
+</div>
 </body>
-
 </html>
