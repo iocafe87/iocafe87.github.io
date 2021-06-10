@@ -1,115 +1,102 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
-<title>Gridea 真心很纯粹的静态博客工具 | iocafe87</title>
-<meta name="description" content="温故而知新">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://codefmt.net/favicon.ico?v=1623307105994">
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>iocafe87</title>
+<meta name="description" content="温故而知新" />
+<link rel="shortcut icon" href="https://codefmt.net/favicon.ico?v=1623333911304">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
 <link rel="stylesheet" href="https://codefmt.net/styles/main.css">
-
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://codefmt.net">
-        <img class="avatar" src="https://codefmt.net/images/avatar.png?v=1623307105994" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://codefmt.net">
-        <h1 class="site-title">iocafe87</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://codefmt.net">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://codefmt.net/images/avatar.png?v=1623333911304" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">iocafe87</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85">主题安装</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE-gitalk">配置 Gitalk</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
     </div>
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
       
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
       
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
+    
       
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
       
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
+    
       
-    </div>
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
   </div>
-</transition>
-
-
-      <div class="content-container">
-        <div class="post-detail">
-          
-          <h2 class="post-title">Gridea 真心很纯粹的静态博客工具</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2021-06-09</span>
-            
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://codefmt.net/tag/GEbwhm2Dz/">
-                    Gridea
-                    
-                      ，
-                    
-                  </a>
-                
-                  <a href="https://codefmt.net/tag/sM8yjYWup/">
-                    Gitalk
-                    
-                  </a>
-                
-              </span>
-            
-          </div>
-          <div class="post-content">
-            <p>虽然总爱去折腾各类博客工具，从早期的 wordpress、typecho，到现在各类 markdown + 静态化。jekyll、octopress、hexo... 折腾了一圈下来，笔记没写多少，真的就只剩下折腾了，当初还摸索着做了几个 typecho 的主题皮肤。</p>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://codefmt.net/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">Gridea 真心很纯粹的静态博客工具</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-06-09 / 2 min read
+        </div>
+        
+        <div class="post-content yue">
+          <p>虽然总爱去折腾各类博客工具，从早期的 wordpress、typecho，到现在各类 markdown + 静态化。jekyll、octopress、hexo... 折腾了一圈下来，笔记没写多少，真的就只剩下折腾了，当初还摸索着做了几个 typecho 的主题皮肤。</p>
 <p>无意间在 github 上看到某位大佬正在使用 Gridea，饶有兴趣的点进去看了下，果然不愧是被大佬看上眼的产品啊，真是简洁用心的产品设计，不需要折腾前先得配合着文档一步一步的操作 😂，只需要专注在撰写内容上即可，尤其配合像 uPic 这类APP + 图床 的组合，简直不要太爽。</p>
 <h3 id="主题安装">主题安装</h3>
 <figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/O6Uegb.png" alt="O6Uegb" loading="lazy"></figure>
@@ -123,86 +110,171 @@
 <figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/AdZL5p.png" alt="AdZL5p" loading="lazy"></figure>
 <p>再把以上所有的信息配置到<code>评论配置</code>里面即可。剩下的，就可以开始折腾了 🤔</p>
 
-          </div>
         </div>
 
         
-          <div class="next-post">
-            <a class="purple-link" href="https://codefmt.net/post/li5IGTCU7/">
-              <h3 class="post-title">
-                下一篇：通过配置iTerm2的Profiles来方便管理VPS的SSH登录
-              </h3>
-            </a>
-          </div>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://codefmt.net/tag/GEbwhm2Dz/">
+            <span class="flex-auto">Gridea</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://codefmt.net/tag/sM8yjYWup/">
+            <span class="flex-auto">Gitalk</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
           
-      </div>
+            <div class="prev-post">
+              <a href="https://codefmt.net/post/ekc3UXedp/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  Gridea 使用自定义域名 + Github Pages
+                </h3>
+              </a>
+            </div>
+          
 
-      
+          
+            <div class="next-post">
+              <a href="https://codefmt.net/post/li5IGTCU7/">
+                <h3 class="post-title">
+                  通过配置iTerm2的Profiles来方便管理VPS的SSH登录
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
         
-          <div id="gitalk-container"></div>
-        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-        
-      
+<div id="gitalk-container"></div>
 
-      <div class="site-footer">
-  <div class="slogan">温故而知新</div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://codefmt.net/atom.xml" target="_blank">RSS</a>
-</div>
+<script>
 
+  var gitalk = new Gitalk({
+    clientID: '8df8e3220481f93eb0fb',
+    clientSecret: 'c6e4c74e6395b541b32851398e4ab385bd2e5fa1',
+    repo: 'blog_comment',
+    owner: 'iocafe87',
+    admin: ['iocafe87'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
 
-    </div>
-    <script type="application/javascript">
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  gitalk.render('gitalk-container')
 
 </script>
 
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://codefmt.net/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
   
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    <script>
-
-      var gitalk = new Gitalk({
-        clientID: '8df8e3220481f93eb0fb',
-        clientSecret: 'c6e4c74e6395b541b32851398e4ab385bd2e5fa1',
-        repo: 'blog_comment',
-        owner: 'iocafe87',
-        admin: ['iocafe87'],
-        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
-
-      gitalk.render('gitalk-container')
-
-    </script>
-  
-
-  
-
-
-
-
   </body>
 </html>
