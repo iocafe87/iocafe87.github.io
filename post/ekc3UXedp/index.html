@@ -1,108 +1,122 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>Gridea 使用自定义域名 + Github Pages | iocafe87</title>
-<link rel="shortcut icon" href="https://codefmt.net/favicon.ico?v=1623306520252">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://codefmt.net/favicon.ico?v=1623307105994">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://codefmt.net/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Gridea 使用自定义域名 + Github Pages | iocafe87 - Atom Feed" href="https://codefmt.net/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-    <meta name="description" content="Gridea 真的是让人省心啊，该有的功能都非常完善，开箱即用。比如配置上自己的域名，同时解析到Github Pages，只需要 3、4 步即可完成。
-DNS解析
-在你域名所在DNS服务商处进行配置，例如我是在 Cloudflare ，添加..." />
-    <meta name="keywords" content="自定义域名,DNS,Gridea" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://codefmt.net">
-  <img class="avatar" src="https://codefmt.net/images/avatar.png?v=1623306520252" alt="">
-  </a>
-  <h1 class="site-title">
-    iocafe87
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://codefmt.net">
+        <img class="avatar" src="https://codefmt.net/images/avatar.png?v=1623307105994" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://codefmt.net">
+        <h1 class="site-title">iocafe87</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              Gridea 使用自定义域名 + Github Pages
-            </h2>
-            <div class="post-info">
-              <span>
-                2021-06-10
-              </span>
-              <span>
-                2 min read
-              </span>
-              
-                <a href="https://codefmt.net/tag/69epAAUIl/" class="post-tag">
-                  # 自定义域名
-                </a>
-              
-                <a href="https://codefmt.net/tag/IJQgCbFxR7/" class="post-tag">
-                  # DNS
-                </a>
-              
-                <a href="https://codefmt.net/tag/GEbwhm2Dz/" class="post-tag">
-                  # Gridea
-                </a>
-              
-            </div>
+          
+          <h2 class="post-title">Gridea 使用自定义域名 + Github Pages</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-06-10</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>Gridea 真的是让人省心啊，该有的功能都非常完善，开箱即用。比如配置上自己的域名，同时解析到Github Pages，只需要 3、4 步即可完成。</p>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://codefmt.net/tag/69epAAUIl/">
+                    自定义域名
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://codefmt.net/tag/IJQgCbFxR7/">
+                    DNS
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://codefmt.net/tag/GEbwhm2Dz/">
+                    Gridea
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>Gridea 真的是让人省心啊，该有的功能都非常完善，开箱即用。比如配置上自己的域名，同时解析到Github Pages，只需要 3、4 步即可完成。</p>
 <h3 id="dns解析">DNS解析</h3>
 <p>在你域名所在DNS服务商处进行配置，例如我是在 Cloudflare ，添加一条 CNAME 记录，目标输入 Github Pages 的二级域名，也就是你原本 Blog  的地址，<code>{name}.github.io</code></p>
 <figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/KX9bcW.png" alt="KX9bcW" loading="lazy"></figure>
@@ -119,116 +133,86 @@ DNS解析
 <figure data-type="image" tabindex="6"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/9RSxgs.png" alt="9RSxgs" loading="lazy"></figure>
 <p>将 <strong>域名</strong> 和 <strong>CNAME</strong> 都配置为你的 Blog 地址即可。然后点击 <strong>同步</strong> ，至此自定义域名的配置方法就完成了，简单快速好理解。</p>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#dns%E8%A7%A3%E6%9E%90">DNS解析</a></li>
-<li><a href="#github-pages-%E8%AE%BE%E7%BD%AE">Github Pages 设置</a></li>
-<li><a href="#%E4%BF%AE%E6%94%B9-gitalk-%E7%BB%91%E5%AE%9A%E7%9A%84-application-%E9%85%8D%E7%BD%AE%E6%B2%A1%E6%9C%89%E5%90%AF%E7%94%A8-gitalk-%E8%AF%B7%E8%B7%B3%E8%BF%87">修改 Gitalk 绑定的 Application 配置（没有启用 Gitalk 请跳过）</a></li>
-<li><a href="#%E9%85%8D%E7%BD%AE-gridea">配置 Gridea</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://codefmt.net/post/9lZq3Avf-/">
+            <a class="purple-link" href="https://codefmt.net/post/9lZq3Avf-/">
               <h3 class="post-title">
-                Gridea 真心很纯粹的静态博客工具
+                下一篇：Gridea 真心很纯粹的静态博客工具
               </h3>
             </a>
           </div>
-        
-
-        
           
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+      </div>
 
-<div id="gitalk-container"></div>
+      
+        
+          <div id="gitalk-container"></div>
+        
 
-<script>
+        
+      
 
-  var gitalk = new Gitalk({
-    clientID: '8df8e3220481f93eb0fb',
-    clientSecret: 'c6e4c74e6395b541b32851398e4ab385bd2e5fa1',
-    repo: 'blog_comment',
-    owner: 'iocafe87',
-    admin: ['iocafe87'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://codefmt.net/atom.xml" target="_blank">RSS</a>
+</div>
 
-  gitalk.render('gitalk-container')
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
-          
 
-          
-        
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://codefmt.net/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
-
-      </div>
-    </div>
-
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <script>
-      hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+      var gitalk = new Gitalk({
+        clientID: '8df8e3220481f93eb0fb',
+        clientSecret: 'c6e4c74e6395b541b32851398e4ab385bd2e5fa1',
+        repo: 'blog_comment',
+        owner: 'iocafe87',
+        admin: ['iocafe87'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
-
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
-
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
+      gitalk.render('gitalk-container')
 
     </script>
+  
+
+  
+
+
+
+
   </body>
 </html>

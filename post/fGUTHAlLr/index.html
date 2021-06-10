@@ -1,63 +1,168 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>使用Cloudflare的免费SSL证书 | iocafe87</title>
-<link rel="shortcut icon" href="https://codefmt.net/favicon.ico?v=1623306520252">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://codefmt.net/favicon.ico?v=1623307105994">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://codefmt.net/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="使用Cloudflare的免费SSL证书 | iocafe87 - Atom Feed" href="https://codefmt.net/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-    <meta name="description" content="随着像Google、百度等都表示将更亲和https站点，降权http站点，以及Chrome宣布对非https的站点，将标记为“不安全”的措施以来，全站启用https越来越将是未来的一个必然趋势，也是网站运营者对访问用户的一种安全责任。
-
-目..." />
-    <meta name="keywords" content="Cloudflare,SSL,Nginx" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://codefmt.net">
-  <img class="avatar" src="https://codefmt.net/images/avatar.png?v=1623306520252" alt="">
-  </a>
-  <h1 class="site-title">
-    iocafe87
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://codefmt.net">
+        <img class="avatar" src="https://codefmt.net/images/avatar.png?v=1623307105994" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://codefmt.net">
+        <h1 class="site-title">iocafe87</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">使用Cloudflare的免费SSL证书</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-06-09</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://codefmt.net/tag/cHyNjf9VR/">
+                    Cloudflare
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://codefmt.net/tag/fju0uyy5rE/">
+                    SSL
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://codefmt.net/tag/tj8AqUDXW1/">
+                    Nginx
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>随着像Google、百度等都表示将更亲和https站点，降权http站点，以及Chrome宣布对非https的站点，将标记为“不安全”的措施以来，全站启用https越来越将是未来的一个必然趋势，也是网站运营者对访问用户的一种安全责任。</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/uKb1T8.jpg" alt="uKb1T8" loading="lazy"></figure>
+<p>目前诸多CDN服务商都开始提供免费的SSL证书服务，对于像我们这类小博客来说，使用免费的证书足以达到https的基本需求了。今天就来介绍一下申请Cloudflare的免费SSL证书，并配置到nginx上去。（前提要求，域名必须添加到Cloudflare当中，并将域名的NS配置为Cloudflare的NS服务器）</p>
+<h3 id="操作方法">操作方法</h3>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/bm6zFk.jpg" alt="bm6zFk" loading="lazy"></figure>
+<p>打开<strong>对应域名</strong>的&quot;Crypto&quot;配置界面，找到右侧的选项卡进行选择。分别有<code>Off</code> <code>Flexible</code> <code>Full</code> <code>Full (strict)</code>，在页面上的<code>Help</code>上可以找到一些介绍。</p>
+<ul>
+<li>Off: 顾名思义就是不启用https访问，所有的https都将被重定向到http上</li>
+<li>Flexible: 访问者到Cloudflare的连接是通过https协议，而Cloudflare到源站的连接是通过http协议，适用于那些无法把SSL证书配置到源站上的用户选择。</li>
+<li>Full: 访问者到Cloudflare，再到源站的连接，都是通过https协议完成。但是并不会去验证Cloudflare到源站之间https协议证书是否为“自签”。</li>
+<li>Full(strict): 与Full的都为全程https协议连接。但会验证Cloudflare到源站之间的https协议证书的合法性：“没有过期的可信机构签发的CA证书”</li>
+</ul>
+<p>如果此处选择使用<code>Flexible</code>的话，我们就基本的完成了https的配置，因为在源站上可以不改变任何的配置，例如保持nginx上使用80端口的配置不变。如果此处我们选择了<code>Full</code>或<code>Full(strict)</code>，则可以使用Cloudflare创建一个免费的证书。</p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/dGq34y.jpg" alt="dGq34y" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/rbzepn.jpg" alt="rbzepn" loading="lazy"></figure>
+<p>我们可以把<code>Always USE HTTPS</code>打开，这样所有的http请求会通过cloudflare这边，重定向到https上</p>
+<figure data-type="image" tabindex="5"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/kSI4Ln.jpg" alt="kSI4Ln" loading="lazy"></figure>
+<h3 id="配置nginx">配置nginx</h3>
+<p>之后根据你自己的需求选择不同的签发形式，我这里选择默认的形式，拿到证书和私钥。通过FTP上传到VPS上，再配置nginx，即可实现全程都加密的https访问了。</p>
+<pre><code class="language-bash">ssl on;
+ssl_certificate /usr/local/nginx/conf/ssl/ssl.crt;
+ssl_certificate_key /usr/local/nginx/conf/ssl/ssl.key;
+</code></pre>
+<figure data-type="image" tabindex="6"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/5gqoPo.jpg" alt="5gqoPo" loading="lazy"></figure>
+<p>这样，我们的工作便完成了！</p>
+<h3 id="一些问题">一些问题</h3>
+<p>配置nginx可能会遇到<code>PEM_read_bio_X509_AUX</code>这样的错误提示，可能是在copy证书时，字符少拷贝了，或者多打了一些字符，重新copy一下即可解决</p>
+<h3 id="题外话">题外话</h3>
+<p>Cloudflare的CDN海外节点在国内访问，会有不稳定的情况发生，静态资源加载起来很卡，所以服务于国内用户的站，还是建议备案并使用国内CDN，对于我这个博客而言，小众站点无所谓了。</p>
+<p>相传GFW对证书是Cloudflare签发的站，还会“特别照顾”，不知道是不是真的。</p>
+
+          </div>
+        </div>
+
+        
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
   <div class="social-container">
     
       
@@ -71,169 +176,49 @@
       
     
   </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://codefmt.net/atom.xml" target="_blank">RSS</a>
 </div>
 
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              使用Cloudflare的免费SSL证书
-            </h2>
-            <div class="post-info">
-              <span>
-                2021-06-09
-              </span>
-              <span>
-                3 min read
-              </span>
-              
-                <a href="https://codefmt.net/tag/cHyNjf9VR/" class="post-tag">
-                  # Cloudflare
-                </a>
-              
-                <a href="https://codefmt.net/tag/fju0uyy5rE/" class="post-tag">
-                  # SSL
-                </a>
-              
-                <a href="https://codefmt.net/tag/tj8AqUDXW1/" class="post-tag">
-                  # Nginx
-                </a>
-              
-            </div>
-            
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>随着像Google、百度等都表示将更亲和https站点，降权http站点，以及Chrome宣布对非https的站点，将标记为“不安全”的措施以来，全站启用https越来越将是未来的一个必然趋势，也是网站运营者对访问用户的一种安全责任。</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/05/02/6Y2fclj3NJSM57W.png" alt="https://i.loli.net/2020/05/02/6Y2fclj3NJSM57W.png" loading="lazy"></figure>
-<p>目前诸多CDN服务商都开始提供免费的SSL证书服务，对于像我们这类小博客来说，使用免费的证书足以达到https的基本需求了。今天就来介绍一下申请Cloudflare的免费SSL证书，并配置到nginx上去。（前提要求，域名必须添加到Cloudflare当中，并将域名的NS配置为Cloudflare的NS服务器）</p>
-<h3 id="操作方法">操作方法</h3>
-<figure data-type="image" tabindex="2"><img src="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/kg741.png" alt="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/kg741.png" loading="lazy"></figure>
-<p>打开<strong>对应域名</strong>的&quot;Crypto&quot;配置界面，找到右侧的选项卡进行选择。分别有<code>Off</code> <code>Flexible</code> <code>Full</code> <code>Full (strict)</code>，在页面上的<code>Help</code>上可以找到一些介绍。</p>
-<ul>
-<li>Off: 顾名思义就是不启用https访问，所有的https都将被重定向到http上</li>
-<li>Flexible: 访问者到Cloudflare的连接是通过https协议，而Cloudflare到源站的连接是通过http协议，适用于那些无法把SSL证书配置到源站上的用户选择。</li>
-<li>Full: 访问者到Cloudflare，再到源站的连接，都是通过https协议完成。但是并不会去验证Cloudflare到源站之间https协议证书是否为“自签”。</li>
-<li>Full(strict): 与Full的都为全程https协议连接。但会验证Cloudflare到源站之间的https协议证书的合法性：“没有过期的可信机构签发的CA证书”</li>
-</ul>
-<p>如果此处选择使用<code>Flexible</code>的话，我们就基本的完成了https的配置，因为在源站上可以不改变任何的配置，例如保持nginx上使用80端口的配置不变。如果此处我们选择了<code>Full</code>或<code>Full(strict)</code>，则可以使用Cloudflare创建一个免费的证书。</p>
-<figure data-type="image" tabindex="3"><img src="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/2ug4c.png" alt="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/2ug4c.png" loading="lazy"></figure>
-<figure data-type="image" tabindex="4"><img src="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/oja1x.jpg" alt="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/oja1x.jpg" loading="lazy"></figure>
-<p>我们可以把<code>Always USE HTTPS</code>打开，这样所有的http请求会通过cloudflare这边，重定向到https上</p>
-<figure data-type="image" tabindex="5"><img src="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/1b1o3.png" alt="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/1b1o3.png" loading="lazy"></figure>
-<h3 id="配置nginx">配置nginx</h3>
-<p>之后根据你自己的需求选择不同的签发形式，我这里选择默认的形式，拿到证书和私钥。通过FTP上传到VPS上，再配置nginx，即可实现全程都加密的https访问了。</p>
-<pre><code class="language-bash">ssl on;
-ssl_certificate /usr/local/nginx/conf/ssl/gofmt.crt;
-ssl_certificate_key /usr/local/nginx/conf/ssl/gofmt.key;
-</code></pre>
-<figure data-type="image" tabindex="6"><img src="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/2k867.jpg" alt="https://gofmt.oss-cn-hangzhou.aliyuncs.com/images/2k867.jpg" loading="lazy"></figure>
-<p>这样，我们的工作便完成了！</p>
-<h3 id="一些问题">一些问题</h3>
-<p>配置nginx可能会遇到<code>PEM_read_bio_X509_AUX</code>这样的错误提示，可能是在copy证书时，字符少拷贝了，或者多打了一些字符，重新copy一下即可解决</p>
-<h3 id="题外话">题外话</h3>
-<p>Cloudflare的CDN海外节点在国内访问，会有不稳定的情况发生，静态资源加载起来很卡，所以服务于国内用户的站，还是建议备案并使用国内CDN，对于我这个博客而言，小众站点无所谓了。</p>
-<p>相传GFW对证书是Cloudflare签发的站，还会“特别照顾”，不知道是不是真的。</p>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95">操作方法</a></li>
-<li><a href="#%E9%85%8D%E7%BD%AEnginx">配置nginx</a></li>
-<li><a href="#%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98">一些问题</a></li>
-<li><a href="#%E9%A2%98%E5%A4%96%E8%AF%9D">题外话</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+    </div>
+    <script type="application/javascript">
 
-              </div>
-            </div>
-          </article>
-        </div>
+hljs.initHighlightingOnLoad()
 
-        
-
-        
-          
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
-<script>
-
-  var gitalk = new Gitalk({
-    clientID: '8df8e3220481f93eb0fb',
-    clientSecret: 'c6e4c74e6395b541b32851398e4ab385bd2e5fa1',
-    repo: 'blog_comment',
-    owner: 'iocafe87',
-    admin: ['iocafe87'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
-          
 
-          
-        
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://codefmt.net/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
-
-      </div>
-    </div>
-
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <script>
-      hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+      var gitalk = new Gitalk({
+        clientID: '8df8e3220481f93eb0fb',
+        clientSecret: 'c6e4c74e6395b541b32851398e4ab385bd2e5fa1',
+        repo: 'blog_comment',
+        owner: 'iocafe87',
+        admin: ['iocafe87'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
-
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
-
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
+      gitalk.render('gitalk-container')
 
     </script>
+  
+
+  
+
+
+
+
   </body>
 </html>

@@ -1,61 +1,156 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>通过配置iTerm2的Profiles来方便管理VPS的SSH登录 | iocafe87</title>
-<link rel="shortcut icon" href="https://codefmt.net/favicon.ico?v=1623306520252">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://codefmt.net/favicon.ico?v=1623307105994">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://codefmt.net/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="通过配置iTerm2的Profiles来方便管理VPS的SSH登录 | iocafe87 - Atom Feed" href="https://codefmt.net/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-    <meta name="description" content="喜欢折腾VPS的人，难免手上会有一堆IP地址，平时记忆起来也比较麻烦，每次SSH远程登录管理VPS总要找半天。Mac上的终端软件iTerm恰好可以通过配置它的Profiles来实现VPS的快速登录。当然还可以组合更多的方式方法，可配置的自由..." />
-    <meta name="keywords" content="iTerm2,SSH,macOS" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://codefmt.net">
-  <img class="avatar" src="https://codefmt.net/images/avatar.png?v=1623306520252" alt="">
-  </a>
-  <h1 class="site-title">
-    iocafe87
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://codefmt.net">
+        <img class="avatar" src="https://codefmt.net/images/avatar.png?v=1623307105994" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://codefmt.net">
+        <h1 class="site-title">iocafe87</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">通过配置iTerm2的Profiles来方便管理VPS的SSH登录</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-06-09</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://codefmt.net/tag/Tt-2SSbgn/">
+                    iTerm2
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://codefmt.net/tag/W-hjikTmtM/">
+                    SSH
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://codefmt.net/tag/_lgW7WUI6/">
+                    macOS
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>喜欢折腾VPS的人，难免手上会有一堆IP地址，平时记忆起来也比较麻烦，每次SSH远程登录管理VPS总要找半天。Mac上的终端软件<code>iTerm</code>恰好可以通过配置它的Profiles来实现VPS的快速登录。当然还可以组合更多的方式方法，可配置的自由度很高。</p>
+<p>通过配置打开iTerm的Profiles菜单，找到<code>Open Profiles</code>。</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/LVVfyp.jpg" alt="" loading="lazy"></figure>
+<p>点击新窗口右下的<code>Edit Profiles...</code>，会继续打开一个新窗口</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/TxSiMv.jpg" alt="TxSiMv" loading="lazy"></figure>
+<p>点击左下角的<code>加号</code>来添加一个配置，选择右侧的<code>Command</code>，也就是激活这个窗口的时候需要执行的指令，直接把<code>ssh</code>的相关指令写进去，这样就可实现激活这个新窗口就开始登录我们的VPS。<code>Name</code>当中填写一个自己能够很清楚分辨的名字，比如我自己的习惯是 <code>节点名字 - IP</code> 或 <code>主机名 - IP</code>。</p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/WqHzib.jpg" alt="WqHzib" loading="lazy"></figure>
+<p>登录VPS只需要从菜单栏中<code>Profiles</code>打开，选择刚才新建的配置即可</p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/k2wdae.jpg" alt="k2wdae" loading="lazy"></figure>
+<p>建议可以使用证书方式的SSH登录，这样每次登录就不必要输入密码，安全也更方便。</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://codefmt.net/post/C-jw9sw7L/">
+              <h3 class="post-title">
+                下一篇：在Mac下设置ll、la等命令别名
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
   <div class="social-container">
     
       
@@ -69,144 +164,49 @@
       
     
   </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://codefmt.net/atom.xml" target="_blank">RSS</a>
 </div>
 
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              通过配置iTerm2的Profiles来方便管理VPS的SSH登录
-            </h2>
-            <div class="post-info">
-              <span>
-                2021-06-09
-              </span>
-              <span>
-                2 min read
-              </span>
-              
-                <a href="https://codefmt.net/tag/Tt-2SSbgn/" class="post-tag">
-                  # iTerm2
-                </a>
-              
-                <a href="https://codefmt.net/tag/W-hjikTmtM/" class="post-tag">
-                  # SSH
-                </a>
-              
-                <a href="https://codefmt.net/tag/_lgW7WUI6/" class="post-tag">
-                  # macOS
-                </a>
-              
-            </div>
-            
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>喜欢折腾VPS的人，难免手上会有一堆IP地址，平时记忆起来也比较麻烦，每次SSH远程登录管理VPS总要找半天。Mac上的终端软件<code>iTerm</code>恰好可以通过配置它的Profiles来实现VPS的快速登录。当然还可以组合更多的方式方法，可配置的自由度很高。</p>
-<p>通过配置打开iTerm的Profiles菜单，找到<code>Open Profiles</code>。</p>
-<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/LVVfyp.jpg" alt="" loading="lazy"></figure>
-<p>点击新窗口右下的<code>Edit Profiles...</code>，会继续打开一个新窗口</p>
-<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/TxSiMv.jpg" alt="TxSiMv" loading="lazy"></figure>
-<p>点击左下角的<code>加号</code>来添加一个配置，选择右侧的<code>Command</code>，也就是激活这个窗口的时候需要执行的指令，直接把<code>ssh</code>的相关指令写进去，这样就可实现激活这个新窗口就开始登录我们的VPS。<code>Name</code>当中填写一个自己能够很清楚分辨的名字，比如我自己的习惯是 <code>节点名字 - IP</code> 或 <code>主机名 - IP</code>。</p>
-<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/WqHzib.jpg" alt="WqHzib" loading="lazy"></figure>
-<p>登录VPS只需要从菜单栏中<code>Profiles</code>打开，选择刚才新建的配置即可</p>
-<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/k2wdae.jpg" alt="k2wdae" loading="lazy"></figure>
-<p>建议可以使用证书方式的SSH登录，这样每次登录就不必要输入密码，安全也更方便。</p>
 
-              </div>
-              <div class="toc-container">
-                
-              </div>
-            </div>
-          </article>
-        </div>
+    </div>
+    <script type="application/javascript">
 
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://codefmt.net/post/C-jw9sw7L/">
-              <h3 class="post-title">
-                在Mac下设置ll、la等命令别名
-              </h3>
-            </a>
-          </div>
-        
+hljs.initHighlightingOnLoad()
 
-        
-          
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
-<script>
-
-  var gitalk = new Gitalk({
-    clientID: '8df8e3220481f93eb0fb',
-    clientSecret: 'c6e4c74e6395b541b32851398e4ab385bd2e5fa1',
-    repo: 'blog_comment',
-    owner: 'iocafe87',
-    admin: ['iocafe87'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
-          
 
-          
-        
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://codefmt.net/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
-
-      </div>
-    </div>
-
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <script>
-      hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+      var gitalk = new Gitalk({
+        clientID: '8df8e3220481f93eb0fb',
+        clientSecret: 'c6e4c74e6395b541b32851398e4ab385bd2e5fa1',
+        repo: 'blog_comment',
+        owner: 'iocafe87',
+        admin: ['iocafe87'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
-
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
-
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
+      gitalk.render('gitalk-container')
 
     </script>
+  
+
+  
+
+
+
+
   </body>
 </html>
