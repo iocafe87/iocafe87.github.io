@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://codefmt.net</id>
     <title>iocafe87</title>
-    <updated>2021-06-10T06:19:08.328Z</updated>
+    <updated>2021-06-10T06:21:30.575Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://codefmt.net"/>
     <link rel="self" href="https://codefmt.net/atom.xml"/>
@@ -30,8 +30,8 @@
 <p>在你的个人设置：<code>Settings</code> -&gt; <code>Developer settings</code> -&gt; <code>OAuth Apps</code> ，直接点击这里到达：<a href="https://github.com/settings/developers">https://github.com/settings/developers</a>。修改 Application 的 <code>Homepage URL</code> 和 <code>Authorization callback URL</code> 为你 Blog 域名地址</p>
 <figure data-type="image" tabindex="5"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/lwxFhJ.png" alt="lwxFhJ" loading="lazy"></figure>
 <h3 id="配置-gridea">配置 Gridea</h3>
-<figure data-type="image" tabindex="6"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/Xm4X4w.png" alt="Xm4X4w" loading="lazy"></figure>
-<p>将 CNAME 配置为你的 Blog 地址即可。然后点击 <strong>同步</strong> ，至此自定义域名的配置方法就完成了，简单快速好理解。</p>
+<figure data-type="image" tabindex="6"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/9RSxgs.png" alt="9RSxgs" loading="lazy"></figure>
+<p>将 <strong>域名</strong> 和 <strong>CNAME</strong> 都配置为你的 Blog 地址即可。然后点击 <strong>同步</strong> ，至此自定义域名的配置方法就完成了，简单快速好理解。</p>
 ]]></content>
     </entry>
     <entry>
