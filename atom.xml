@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://iocafe87.github.io</id>
+    <id>https://codefmt.net</id>
     <title>iocafe87</title>
-    <updated>2021-06-10T06:18:58.865Z</updated>
+    <updated>2021-06-10T06:19:08.328Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://iocafe87.github.io"/>
-    <link rel="self" href="https://iocafe87.github.io/atom.xml"/>
+    <link rel="alternate" href="https://codefmt.net"/>
+    <link rel="self" href="https://codefmt.net/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://iocafe87.github.io/images/avatar.png</logo>
-    <icon>https://iocafe87.github.io/favicon.ico</icon>
+    <logo>https://codefmt.net/images/avatar.png</logo>
+    <icon>https://codefmt.net/favicon.ico</icon>
     <rights>All rights reserved 2021, iocafe87</rights>
     <entry>
         <title type="html"><![CDATA[Gridea 使用自定义域名 + Github Pages]]></title>
-        <id>https://iocafe87.github.io/post/ekc3UXedp/</id>
-        <link href="https://iocafe87.github.io/post/ekc3UXedp/">
+        <id>https://codefmt.net/post/ekc3UXedp/</id>
+        <link href="https://codefmt.net/post/ekc3UXedp/">
         </link>
         <updated>2021-06-10T01:17:43.000Z</updated>
         <content type="html"><![CDATA[<p>Gridea 真的是让人省心啊，该有的功能都非常完善，开箱即用。比如配置上自己的域名，同时解析到Github Pages，只需要 3、4 步即可完成。</p>
@@ -36,8 +36,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Gridea 真心很纯粹的静态博客工具]]></title>
-        <id>https://iocafe87.github.io/post/9lZq3Avf-/</id>
-        <link href="https://iocafe87.github.io/post/9lZq3Avf-/">
+        <id>https://codefmt.net/post/9lZq3Avf-/</id>
+        <link href="https://codefmt.net/post/9lZq3Avf-/">
         </link>
         <updated>2021-06-09T12:19:28.000Z</updated>
         <content type="html"><![CDATA[<p>虽然总爱去折腾各类博客工具，从早期的 wordpress、typecho，到现在各类 markdown + 静态化。jekyll、octopress、hexo... 折腾了一圈下来，笔记没写多少，真的就只剩下折腾了，当初还摸索着做了几个 typecho 的主题皮肤。</p>
@@ -57,8 +57,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[通过配置iTerm2的Profiles来方便管理VPS的SSH登录]]></title>
-        <id>https://iocafe87.github.io/post/li5IGTCU7/</id>
-        <link href="https://iocafe87.github.io/post/li5IGTCU7/">
+        <id>https://codefmt.net/post/li5IGTCU7/</id>
+        <link href="https://codefmt.net/post/li5IGTCU7/">
         </link>
         <updated>2021-06-09T12:10:19.000Z</updated>
         <content type="html"><![CDATA[<p>喜欢折腾VPS的人，难免手上会有一堆IP地址，平时记忆起来也比较麻烦，每次SSH远程登录管理VPS总要找半天。Mac上的终端软件<code>iTerm</code>恰好可以通过配置它的Profiles来实现VPS的快速登录。当然还可以组合更多的方式方法，可配置的自由度很高。</p>
@@ -75,8 +75,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[在Mac下设置ll、la等命令别名]]></title>
-        <id>https://iocafe87.github.io/post/C-jw9sw7L/</id>
-        <link href="https://iocafe87.github.io/post/C-jw9sw7L/">
+        <id>https://codefmt.net/post/C-jw9sw7L/</id>
+        <link href="https://codefmt.net/post/C-jw9sw7L/">
         </link>
         <updated>2021-06-09T12:07:21.000Z</updated>
         <content type="html"><![CDATA[<p>Linux下的<code>ll</code>，<code>la</code>用起来非常方便，但是Mac下默认是没有这些别名的。我们可以自己配置一下别名。把指令配置到<code>~/.bash_profile</code>文件当中即可（如果没有，请自行创建）。</p>
@@ -91,8 +91,8 @@ alias la='ls -Al'
     </entry>
     <entry>
         <title type="html"><![CDATA[使用Cloudflare的免费SSL证书]]></title>
-        <id>https://iocafe87.github.io/post/fGUTHAlLr/</id>
-        <link href="https://iocafe87.github.io/post/fGUTHAlLr/">
+        <id>https://codefmt.net/post/fGUTHAlLr/</id>
+        <link href="https://codefmt.net/post/fGUTHAlLr/">
         </link>
         <updated>2021-06-09T11:55:56.000Z</updated>
         <content type="html"><![CDATA[<p>随着像Google、百度等都表示将更亲和https站点，降权http站点，以及Chrome宣布对非https的站点，将标记为“不安全”的措施以来，全站启用https越来越将是未来的一个必然趋势，也是网站运营者对访问用户的一种安全责任。</p>
