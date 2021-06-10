@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iocafe87.github.io</id>
     <title>iocafe87</title>
-    <updated>2021-06-10T01:13:26.416Z</updated>
+    <updated>2021-06-10T06:07:20.013Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iocafe87.github.io"/>
     <link rel="self" href="https://iocafe87.github.io/atom.xml"/>
@@ -10,6 +10,30 @@
     <logo>https://iocafe87.github.io/images/avatar.png</logo>
     <icon>https://iocafe87.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, iocafe87</rights>
+    <entry>
+        <title type="html"><![CDATA[Gridea 使用自定义域名 + Github Pages]]></title>
+        <id>https://iocafe87.github.io/post/ekc3UXedp/</id>
+        <link href="https://iocafe87.github.io/post/ekc3UXedp/">
+        </link>
+        <updated>2021-06-10T01:17:43.000Z</updated>
+        <content type="html"><![CDATA[<p>Gridea 真的是让人省心啊，该有的功能都非常完善，开箱即用。比如配置上自己的域名，同时解析到Github Pages，只需要 3、4 步即可完成。</p>
+<h3 id="dns解析">DNS解析</h3>
+<p>在你域名所在DNS服务商处进行配置，例如我是在 Cloudflare ，添加一条 CNAME 记录，目标输入 Github Pages 的二级域名，也就是你原本 Blog  的地址，<code>{name}.github.io</code></p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/KX9bcW.png" alt="KX9bcW" loading="lazy"></figure>
+<p>同时将 SSL 方式配置为 <strong>完全（严格）</strong>，并开启 <strong>始终使用 HTTPS</strong> 。</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/lMK9Zj.png" alt="lMK9Zj" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/l7wDZN.png" alt="l7wDZN" loading="lazy"></figure>
+<h3 id="github-pages-设置">Github Pages 设置</h3>
+<p>找到你 Blog 所存放的仓库，也就是名为 <code>{name}.github.io</code> 的 Git 仓库，进入 <code>Settings</code> -&gt; <code>Pages</code>，配置 <code>custom domain</code>，将自己的域名填写进去。Github Pages 要求填写带有 <code>www</code> 或是其他二级域名地址，我觉得 www 太多余，就直接写的 <strong>顶级域名</strong> 地址进去，具体情况可以自己去配置，这里虽然 Github 会认为我们的 DNS 解析有问题，但非 www 的方式也是可以访问的。同时把下方的 <code>Enforce HTTPS</code> 强制 HTTPS 打开。</p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/mnon8C.png" alt="mnon8C" loading="lazy"></figure>
+<h3 id="修改-gitalk-绑定的-application-配置没有启用-gitalk-请跳过">修改 Gitalk 绑定的 Application 配置（没有启用 Gitalk 请跳过）</h3>
+<p>在你的个人设置：<code>Settings</code> -&gt; <code>Developer settings</code> -&gt; <code>OAuth Apps</code> ，直接点击这里到达：<a href="https://github.com/settings/developers">https://github.com/settings/developers</a>。修改 Application 的 <code>Homepage URL</code> 和 <code>Authorization callback URL</code> 为你 Blog 域名地址</p>
+<figure data-type="image" tabindex="5"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/lwxFhJ.png" alt="lwxFhJ" loading="lazy"></figure>
+<h3 id="配置-gridea">配置 Gridea</h3>
+<figure data-type="image" tabindex="6"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/Xm4X4w.png" alt="Xm4X4w" loading="lazy"></figure>
+<p>将 CNAME 配置为你的 Blog 地址即可。然后点击 <strong>同步</strong> ，至此自定义域名的配置方法就完成了，简单快速好理解。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Gridea 真心很纯粹的静态博客工具]]></title>
         <id>https://iocafe87.github.io/post/9lZq3Avf-/</id>
