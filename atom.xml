@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://codefmt.net</id>
     <title>iocafe87</title>
-    <updated>2021-06-10T14:07:15.890Z</updated>
+    <updated>2021-06-10T14:28:27.482Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://codefmt.net"/>
     <link rel="self" href="https://codefmt.net/atom.xml"/>
@@ -16,7 +16,10 @@
         <link href="https://codefmt.net/post/ekc3UXedp/">
         </link>
         <updated>2021-06-10T01:17:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>Gridea 真的是让人省心啊，该有的功能都非常完善，开箱即用。比如配置上自己的域名，同时解析到Github Pages，只需要 3、4 步即可完成。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>Gridea 真的是让人省心啊，该有的功能都非常完善，开箱即用。比如配置上自己的域名，同时解析到Github Pages，只需要 3、4 步即可完成。</p>
+<!-- more -->
 <h3 id="dns解析">DNS解析</h3>
 <p>在你域名所在DNS服务商处进行配置，例如我是在 Cloudflare ，添加一条 CNAME 记录，目标输入 Github Pages 的二级域名，也就是你原本 Blog  的地址，<code>{name}.github.io</code></p>
 <figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/KX9bcW.png" alt="KX9bcW" loading="lazy"></figure>
@@ -40,7 +43,10 @@
         <link href="https://codefmt.net/post/9lZq3Avf-/">
         </link>
         <updated>2021-06-09T12:19:28.000Z</updated>
+        <summary type="html"><![CDATA[<p>虽然总爱去折腾各类博客工具，从早期的 wordpress、typecho，到现在各类 markdown + 静态化。jekyll、octopress、hexo... 折腾了一圈下来，笔记没写多少，真的就只剩下折腾了，当初还摸索着做了几个 typecho 的主题皮肤。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>虽然总爱去折腾各类博客工具，从早期的 wordpress、typecho，到现在各类 markdown + 静态化。jekyll、octopress、hexo... 折腾了一圈下来，笔记没写多少，真的就只剩下折腾了，当初还摸索着做了几个 typecho 的主题皮肤。</p>
+<!-- more -->
 <p>无意间在 github 上看到某位大佬正在使用 Gridea，饶有兴趣的点进去看了下，果然不愧是被大佬看上眼的产品啊，真是简洁用心的产品设计，不需要折腾前先得配合着文档一步一步的操作 😂，只需要专注在撰写内容上即可，尤其配合像 uPic 这类APP + 图床 的组合，简直不要太爽。</p>
 <h3 id="主题安装">主题安装</h3>
 <figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/O6Uegb.png" alt="O6Uegb" loading="lazy"></figure>
@@ -61,7 +67,10 @@
         <link href="https://codefmt.net/post/li5IGTCU7/">
         </link>
         <updated>2021-06-09T12:10:19.000Z</updated>
+        <summary type="html"><![CDATA[<p>喜欢折腾VPS的人，难免手上会有一堆IP地址，平时记忆起来也比较麻烦，每次SSH远程登录管理VPS总要找半天。Mac上的终端软件<code>iTerm</code>恰好可以通过配置它的Profiles来实现VPS的快速登录。当然还可以组合更多的方式方法，可配置的自由度很高。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>喜欢折腾VPS的人，难免手上会有一堆IP地址，平时记忆起来也比较麻烦，每次SSH远程登录管理VPS总要找半天。Mac上的终端软件<code>iTerm</code>恰好可以通过配置它的Profiles来实现VPS的快速登录。当然还可以组合更多的方式方法，可配置的自由度很高。</p>
+<!-- more -->
 <p>通过配置打开iTerm的Profiles菜单，找到<code>Open Profiles</code>。</p>
 <figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/LVVfyp.jpg" alt="" loading="lazy"></figure>
 <p>点击新窗口右下的<code>Edit Profiles...</code>，会继续打开一个新窗口</p>
@@ -79,7 +88,10 @@
         <link href="https://codefmt.net/post/C-jw9sw7L/">
         </link>
         <updated>2021-06-09T12:07:21.000Z</updated>
+        <summary type="html"><![CDATA[<p>Linux下的<code>ll</code>，<code>la</code>用起来非常方便，但是Mac下默认是没有这些别名的。我们可以自己配置一下别名。把指令配置到<code>~/.bash_profile</code>文件当中即可（如果没有，请自行创建）。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>Linux下的<code>ll</code>，<code>la</code>用起来非常方便，但是Mac下默认是没有这些别名的。我们可以自己配置一下别名。把指令配置到<code>~/.bash_profile</code>文件当中即可（如果没有，请自行创建）。</p>
+<!-- more -->
 <pre><code class="language-bash">vim ~/.bash_profile
 </code></pre>
 <p>添加这些别名（也可根据自己的喜好添加参数）：</p>
@@ -95,7 +107,10 @@ alias la='ls -Al'
         <link href="https://codefmt.net/post/fGUTHAlLr/">
         </link>
         <updated>2021-06-09T11:55:56.000Z</updated>
+        <summary type="html"><![CDATA[<p>随着像Google、百度等都表示将更亲和https站点，降权http站点，以及Chrome宣布对非https的站点，将标记为“不安全”的措施以来，全站启用https越来越将是未来的一个必然趋势，也是网站运营者对访问用户的一种安全责任。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>随着像Google、百度等都表示将更亲和https站点，降权http站点，以及Chrome宣布对非https的站点，将标记为“不安全”的措施以来，全站启用https越来越将是未来的一个必然趋势，也是网站运营者对访问用户的一种安全责任。</p>
+<!-- more -->
 <figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/uKb1T8.jpg" alt="uKb1T8" loading="lazy"></figure>
 <p>目前诸多CDN服务商都开始提供免费的SSL证书服务，对于像我们这类小博客来说，使用免费的证书足以达到https的基本需求了。今天就来介绍一下申请Cloudflare的免费SSL证书，并配置到nginx上去。（前提要求，域名必须添加到Cloudflare当中，并将域名的NS配置为Cloudflare的NS服务器）</p>
 <h3 id="操作方法">操作方法</h3>
