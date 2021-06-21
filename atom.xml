@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://codefmt.net</id>
     <title>iocafe87</title>
-    <updated>2021-06-21T08:30:15.306Z</updated>
+    <updated>2021-06-21T08:32:50.108Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://codefmt.net"/>
     <link rel="self" href="https://codefmt.net/atom.xml"/>
@@ -16,8 +16,12 @@
         <link href="https://codefmt.net/post/8tT9nqbZO/">
         </link>
         <updated>2021-06-21T07:35:56.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="区别">区别</h3>
+<p>golang 提供的一系列工具包中 gofmt 对代码一致性的格式化起到非常重要的作用。而另一个类似的工具包 goimports 则不仅能够提供 gofmt 格式化功能，还能够对所有 imports 进行排序、修正等功能，例如 import 后并未使用、import 错误地址等等。</p>
+]]></summary>
         <content type="html"><![CDATA[<h3 id="区别">区别</h3>
 <p>golang 提供的一系列工具包中 gofmt 对代码一致性的格式化起到非常重要的作用。而另一个类似的工具包 goimports 则不仅能够提供 gofmt 格式化功能，还能够对所有 imports 进行排序、修正等功能，例如 import 后并未使用、import 错误地址等等。</p>
+<!-- more -->
 <blockquote>
 <p>Command goimports updates your Go import lines, adding missing ones and removing unreferenced ones.<br>
 In addition to fixing imports, goimports also formats your code in the same style as gofmt so it can be used as a replacement for your editor's gofmt-on-save hook.</p>
