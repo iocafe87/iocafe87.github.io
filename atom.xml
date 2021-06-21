@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://codefmt.net</id>
     <title>iocafe87</title>
-    <updated>2021-06-10T14:36:25.498Z</updated>
+    <updated>2021-06-21T08:20:31.448Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://codefmt.net"/>
     <link rel="self" href="https://codefmt.net/atom.xml"/>
@@ -10,6 +10,33 @@
     <logo>https://codefmt.net/images/avatar.png</logo>
     <icon>https://codefmt.net/favicon.ico</icon>
     <rights>All rights reserved 2021, iocafe87</rights>
+    <entry>
+        <title type="html"><![CDATA[gofmt vs goimports]]></title>
+        <id>https://codefmt.net/post/8tT9nqbZO/</id>
+        <link href="https://codefmt.net/post/8tT9nqbZO/">
+        </link>
+        <updated>2021-06-21T07:35:56.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="区别">区别</h3>
+<p>golang 提供的一系列工具包中 gofmt 对代码一致性的格式化起到非常重要的作用。而另一个类似的工具包 goimports 则不仅能够提供 gofmt 格式化功能，还能够对所有 imports 进行排序、修正等功能，例如 import 后并未使用、import 错误地址等等。</p>
+<blockquote>
+<p>Command goimports updates your Go import lines, adding missing ones and removing unreferenced ones.<br>
+In addition to fixing imports, goimports also formats your code in the same style as gofmt so it can be used as a replacement for your editor's gofmt-on-save hook.</p>
+</blockquote>
+<h3 id="安装">安装</h3>
+<p>在终端下执行下面命令进行安装</p>
+<p><code>$ go get golang.org/x/tools/cmd/goimports</code></p>
+<h3 id="添加-goland-使用">添加 Goland 使用</h3>
+<p>Goland 默认下是不会开启编辑器内的代码格式化的，需要去配置绑定<strong>保存时的勾子调用</strong></p>
+<p>找到编辑器设置，在 <code>Tools</code> -&gt; <code>File Watchers</code> 下，点击上面的 <code>+</code></p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/7PdhX8.png" alt="7PdhX8" loading="lazy"></figure>
+<p>选择 <code>goimports</code>，之后直接 <code>OK</code></p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/u93YnN.png" alt="u93YnN" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/dGJvAq.png" alt="dGJvAq" loading="lazy"></figure>
+<h3 id="vscode-改用-goimports">vscode 改用 goimports</h3>
+<p>找到 vscode 设置，在 <code>扩展</code> -&gt; <code>Go</code> -&gt; <code>Format Tool</code> 改为 <code>goimports</code>，在上方直接搜索<code>format tool</code> 也能快速找到</p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/iocafe87/statics@master/2021/06/oFM9GI.png" alt="oFM9GI" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Gridea 使用自定义域名 + Github Pages]]></title>
         <id>https://codefmt.net/post/ekc3UXedp/</id>
